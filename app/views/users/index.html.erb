@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login e Registro</title>
+	<style type="text/css">
+    .btn{
+    	font-family:arial; 
+    	font-size:14px;
+    	text-transform:uppercase;
+    	font-weight: 700;
+    	border:none;
+    	cursor: pointer;
+    }
+
+    .btn-green{
+    	background: green;
+    	color:#fff;
+    	box-shadow:0 5px 0 #0060000;
+    }
+    .btn-green:hover{
+		background:#0060000;
+		color:#000;
+		box-shadow:none;
+    }
+    .btn-green:active{
+    	position:relative;
+    	top:5px;
+    	box-shadow:none;
+    }
+  	</style>
+</head>
+<body>
+	<h1 align="center">
+		Login
+	</h1>
+
+	<form align="center" action="/sessions" method="POST">
+		<div>
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+		</div>
+		<div>
+			<input type="email" name="login[mail]" placeholder="email">
+		</div>
+		<div>
+		<input type="password" name="login[password]" placeholder="password">
+		</div>
+		<input class="btn btn-green" type="submit" name="submit" class="submit">
+
+	</form>
+	<h1 align="center">
+		Registration
+	</h1>
+
+	<form align="center" action="/users" method="POST">
+		<div>
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+		</div>
+		<div>
+			<input type="email" name="login[email]" placeholder="email">
+		</div>
+		<div>
+			<input type="password" name="login[password]" placeholder="password">
+		</div>
+		<div>
+			<input type="password" name="user[password_confirmation]" placeholder="password_confirmation">
+		</div>
+		<input class="btn btn-green" type="submit" name="submit" class="sumit">
+		
+
+
+	</form>
+</body>
+</html>

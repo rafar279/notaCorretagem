@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+    .btn{
+    	font-family:arial; 
+    	font-size:14px;
+    	text-transform:uppercase;
+    	font-weight: 700;
+    	border:none;
+    	cursor: pointer;
+    }
+
+    .btn-green{
+    	background: green;
+    	color:#fff;
+    	box-shadow:0 5px 0 #0060000;
+    }
+    .btn-green:hover{
+		background:#0060000;
+		color:#000;
+		box-shadow:none;
+    }
+    .btn-green:active{
+    	position:relative;
+    	top:5px;
+    	box-shadow:none;
+    }
+
+    .titles{
+    	font-family:arial; 
+    	font-size:14px;
+    	text-transform:uppercase;
+    	font-weight: 700;
+    	border:none;
+    	cursor: pointer;
+    }
+
+    .titles-green{
+    	background: green;
+    	color:#fff;
+    	box-shadow:0 5px 0 #0061000;
+    }
+    .titles-green:hover{
+		background:#0060000;
+		color:#fff;
+		box-shadow:none;
+    }
+    
+  	</style>
+</head>
+
+
+<body>
+
+
+	<br>
+	<br>
+	<h1 class="titles titles-green" align="center">
+		Adicionar Informações da Operação
+	</h1>
+	<div align="center">
+		<form  action="/operacoes" method="POST">
+			
+			<div>
+				<input type="date" name="op[data]" placeholder="data">
+			</div>
+			<div>
+				<input type="text" name="op[nome]" placeholder="Nome da Ação">
+			</div>
+			<div>
+				<input type="number" name="op[quantidade]" placeholder="Quantidade de Lotes">
+			</div>
+
+			<div>
+				<input type="number" name="op[compra]" placeholder="Preço da Compra">
+			</div>
+			<div>
+				<input type="number" name="op[venda]" placeholder="Preço da Venda">
+			</div>
+		
+
+
+			<input class="btn btn-green" type="submit" name="Gerar Nota de Corretagem" class="submit">
+	</div>
+	<br>
+	<br>
+	<h1 class="titles titles-green" align="center">
+		Notas de Corretagem
+	</h1>
+	<br>
+		<h5 align="center"> Não há nenhuma nota registrada</h5>
+</body>
+</html>
